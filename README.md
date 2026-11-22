@@ -19,6 +19,14 @@ engines) through the make.fun env, one game after another.
 
 ## Layout
 
-- `main.py` — the whole engine (Python 3.13, standard library only). It
-  talks to the env at `MAKEFUN_ENV_URL`: `POST /game` serves the game in
-  play, `POST /move` plays a move, and it exits when every game is over.
+- `main.py` — the whole engine (Python 3.13, standard library only), packed
+  from the readable source with the make.fun compressor. It talks to the
+  env at `MAKEFUN_ENV_URL`: `POST /game` serves the game in play,
+  `POST /move` plays a move, and it exits when every game is over.
+
+## Local practice
+
+Against the kit's practice gauntlet (depth-2, depth-3, depth-4,
+nodes-100k, nodes-250k, nodes-500k) the engine scored 3.5/6 — wins against
+depth-2 and nodes-250k, draws against depth-3 and depth-4 — for an
+estimated Elo around 1,360, above the house baseline.
